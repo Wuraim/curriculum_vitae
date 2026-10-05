@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grégoire Lorgnier — Resume</title>
+  <style>
+    :root {
+      --text: #1a1a1a;
+      --muted: #555;
+      --accent: #3d5a80;
+      --bg: #f7f7f5;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(ellipse at top left, #e8eef5 0%, transparent 50%),
+        radial-gradient(ellipse at bottom right, #ebe8e2 0%, transparent 45%),
+        var(--bg);
+      padding: 2rem;
+    }
+    main {
+      max-width: 28rem;
+      text-align: center;
+    }
+    h1 {
+      margin: 0 0 0.35rem;
+      font-size: 1.75rem;
+      font-weight: 650;
+      letter-spacing: -0.02em;
+    }
+    p {
+      margin: 0 0 1.75rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    a.cta {
+      display: inline-block;
+      padding: 0.75rem 1.35rem;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 6px;
+    }
+    a.cta:hover { filter: brightness(1.08); }
+    a.secondary {
+      display: inline-block;
+      margin-top: 1rem;
+      color: var(--accent);
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Grégoire Lorgnier</h1>
+    <p>Software Engineer — curriculum vitae (PDF)</p>
+    <a class="cta" href="resume.pdf">Download resume.pdf</a>
+    <br>
+    <a class="secondary" href="https://gregoirelorgnier.me">Portfolio</a>
+  </main>
+</body>
+</html>

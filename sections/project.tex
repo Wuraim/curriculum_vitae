@@ -1,13 +1,27 @@
 %====================
 % PROJECT
 %====================
+\subsection{\href{https://github.com/Wuraim/gregobot-oss}{Gregobot}}
+\subtext{Virtual Workout Coach for Friends --- Self-Hosted Rust Bot \& Admin API}
+
+\begin{zitemize}
+    \item Personal Telegram coach for friends and me (\textasciitilde200 commits): bot and authenticated REST admin API in one async Rust service (Tokio, Axum, Teloxide).
+    \item Persisted domain data with SQLite/SQLx migrations; background schedulers for reminders and AI workflows.
+    \item Optional Gemini layer: embeddings and top-K retrieval over domain data/tools, plus tool calling, in the same process.
+    \item Self-hosted via Docker with API-key auth; deliberate MIT/Apache-2.0 public release.
+    \item Technologies: Rust, Tokio, Axum, Teloxide, SQLx, SQLite, Docker, Gemini.
+\end{zitemize}
+
+\vspace{6pt}
+
+%====================
+% PROJECT
+%====================
 \subsection{{Self-Hosted Production Infrastructure}}
 \subtext{Personal Engineering Project}
 
 \begin{zitemize}
-    \item Designed and deployed a containerized VPS infrastructure hosting production web applications.
-    \item Implemented reverse proxy, automated SSL, and CI/CD deployment pipelines.
-    \item Configured secure Docker-based environments with service isolation.
+    \item Designed and deployed a containerized VPS stack for production web apps (reverse proxy, automated SSL, CI/CD).
     \item Technologies: Docker, Linux, Traefik, GitHub Actions.
 \end{zitemize}
 
@@ -20,10 +34,7 @@
 \subtext{State-Driven 3D Algorithmic Web Application}
 
 \begin{zitemize}
-    \item Designed and implemented a fully interactive 3D Rubik’s Cube simulator with deterministic state transitions.
-    \item Built a logical cube representation modeling permutations and rotations independent from the rendering layer.
-    \item Ensured strict synchronization between the Three.js interface and the internal state engine.
-    \item Integrated a Kociemba-based solving algorithm with bidirectional UI communication and move notation mapping.
+    \item Built an interactive 3D simulator with a domain state engine (permutations/rotations) decoupled from Three.js rendering.
+    \item Integrated a Kociemba-based solver with bidirectional UI sync and move notation mapping.
     \item Technologies: TypeScript, Three.js, state modeling, algorithm integration.
 \end{zitemize}
-

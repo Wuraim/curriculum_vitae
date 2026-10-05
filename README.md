@@ -26,11 +26,13 @@ Chaque push sur `master` (ou un lancement manuel via **Actions → Build and dep
 1. Compile `resume.tex` avec TeX Live (GitHub Actions)
 2. Publie `resume.pdf` + une page d’accueil sur **GitHub Pages**
 
-### Activation Pages (une fois)
+### Activation Pages (obligatoire avant le 1er déploiement)
 
-1. Ouvre le dépôt → **Settings** → **Pages**
-2. Sous **Build and deployment** → **Source**, choisis **GitHub Actions**
-3. Relance le workflow si le premier déploiement a échoué avant cette étape
+Sans cette étape, le workflow échoue avec `Get Pages site failed` / `Not Found`.
+
+1. Ouvre https://github.com/Wuraim/curriculum_vitae/settings/pages
+2. Sous **Build and deployment** → **Source**, choisis **GitHub Actions** (pas « Deploy from a branch »)
+3. Relance le workflow : **Actions** → **Build and deploy CV** → **Run workflow**
 
 Le dépôt doit être **public** pour Pages gratuit sur un compte perso (ou GitHub Pro si privé).
 

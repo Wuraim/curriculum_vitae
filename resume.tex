@@ -1,39 +1,65 @@
-# data-science-tech-resume-template
-[Github Repo](https://github.com/TimmyChan/data-science-tech-resume-template)
-## OFFICIAL PUBLIC OVERLEAF TEMPLATE
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
 
-https://www.overleaf.com/latex/templates/data-science-tech-resume-template/zcdmpfxrzjhv
+%====================
+% OFFICIAL PUBLIC OVERLEAF TEMPLATE
+% https://www.overleaf.com/latex/templates/data-science-tech-resume-template/zcdmpfxrzjhv
+% 
+%====================
+%
+% Resume template for data scientists, a complement to data-science-tech-cover-letter-template:
+% https://www.overleaf.com/latex/templates/data-science-tech-cover-letter-template/gbrcqktbsfxf
+%
+% Files:        resume.tex: Main file
+%               _header.tex: header code
+%               TLCresume.sty: style file containing formatting details
+%               section/objective: https://www.indeed.com/career-advice/resumes-cover-letters/resume-objective-examples
+%               section/skills: table of skills
+%               section/experience: projects or roles
+%               section/education: schools and stuff
+%               section/activities: optional, could comment out in resume.tex.
+%
+% Editor:       https://github.com/TimmyChan 
+%               https://www.linkedin.com/in/timmy-l-chan/
+%               
+% Last Updated: March 24th, 2022
+%
+%====================
 
-Applicant tracking system (ATS), especially older ones, do not like PDFs that have links in them. If such an issue arises, simply take the output pdf and print to another pdf, which would be the quickest way to remove "active contents" in the file. 
 
-Update: *Note that for resumes, best practice is to keep the length to be one page; however, due to popular demand this template was updated to allow for multiple pages.*
+\usepackage{TLCresume}
 
-Resume template for data scientists, a complement to data-science-tech-cover-letter-template:
-https://www.overleaf.com/latex/templates/data-science-tech-cover-letter-template/gbrcqktbsfxf
+%====================
+% CONTACT INFORMATION
+%====================
+\def\name{Grégoire LORGNIER} % Name Here
+\def\phone{\href{tel:+33777860741}{(+33) 7 77 86 07 41}}
+\def\city{Lille, France}
+\def\email{lorgnierg@yahoo.com}
+\def\github{Wuraim} % github username
+\def\role{Software Engineer} % JOB TITLE
+\def\LinkedIn{grégoire-lorgnier-212550172}
+\def\portfoliourl{https://gregoirelorgnier.me}
+\def\portfolioname{gregoirelorgnier.com}
 
-![cover_p1](./.github/assets/v3/data_science_tech_resume_template-1.png)
-![cover_p2](./.github/assets/v3/data_science_tech_resume_template-2.png)
+\input{_header}
+\begin{document}\pagestyle{others}\thispagestyle{first_page}
 
-### Files:
+\input{sections/objective}
 
-- resume.tex: Main file
-- \_header.tex: header code
-- TLCresume.sty: style file containing formatting details
-- section/objective: https://www.indeed.com/career-advice/resumes-cover-letters/resume-objective-examples
-- section/skills: table of skills
-- section/experience: projects or roles
-- section/education: schools and stuff
-- section/activities: optional, could comment out in resume.tex.
+\section{Skills}
+\input{sections/skills}
 
-### Editor:
+\section{Professional Experience}
+\input{sections/experience}
 
-https://github.com/TimmyChan
-https://www.linkedin.com/in/timmy-l-chan/
+% make a newpage wherever it is a clean break
+% \newpage\pagestyle{others}
 
-### Contributors:
+\section{Education}
+\input{sections/education}
 
-- https://github.com/xiazeyu
-- https://github.com/iamgmujtaba
-- https://github.com/alejlatorre
+\section{Projects}
+\input{sections/project}
 
-### Last Updated: Oct 19th, 2025
+\end{document}

@@ -1,65 +1,59 @@
-\documentclass[10pt]{article}
-\usepackage[utf8]{inputenc}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{TLCresume}[11/19/21 resume package]
+% Author: Timmy Chan
 
-%====================
-% OFFICIAL PUBLIC OVERLEAF TEMPLATE
-% https://www.overleaf.com/latex/templates/data-science-tech-resume-template/zcdmpfxrzjhv
-% 
-%====================
-%
-% Resume template for data scientists, a complement to data-science-tech-cover-letter-template:
-% https://www.overleaf.com/latex/templates/data-science-tech-cover-letter-template/gbrcqktbsfxf
-%
-% Files:        resume.tex: Main file
-%               _header.tex: header code
-%               TLCresume.sty: style file containing formatting details
-%               section/objective: https://www.indeed.com/career-advice/resumes-cover-letters/resume-objective-examples
-%               section/skills: table of skills
-%               section/experience: projects or roles
-%               section/education: schools and stuff
-%               section/activities: optional, could comment out in resume.tex.
-%
-% Editor:       https://github.com/TimmyChan 
-%               https://www.linkedin.com/in/timmy-l-chan/
-%               
-% Last Updated: March 24th, 2022
-%
-%====================
+% Assuming using "article" document class and letter sized paper.
+% FONT STUFF
 
+\RequirePackage[T1]{fontenc} %  Font encoding https://texfaq.org/FAQ-why-inp-font
+\RequirePackage[default,semibold]{sourcesanspro}
+\RequirePackage[10pt]{moresize}
+\usepackage{anyfontsize}
+\RequirePackage{csquotes}
 
-\usepackage{TLCresume}
+% MARGINS AND SPACING
+\RequirePackage[margin=.5in, top=.5in, bottom=1in]{geometry} % Set Margins
+\raggedright % left align no indent
+\raggedbottom % top align no indent
 
-%====================
-% CONTACT INFORMATION
-%====================
-\def\name{Grégoire LORGNIER} % Name Here
-\def\phone{\href{tel:+33777860741}{(+33) 7 77 86 07 41}}
-\def\city{Lille, France}
-\def\email{lorgnierg@yahoo.com}
-\def\github{Wuraim} % github username
-\def\role{Software Engineer} % JOB TITLE
-\def\LinkedIn{grégoire-lorgnier-212550172}
-\def\portfoliourl{https://gregoirelorgnier.me}
-\def\portfolioname{gregoirelorgnier.com}
+% COLOR
+\RequirePackage{xcolor}
+\definecolor{highlight}{RGB}{61, 90, 128} % CHANGE THIS TO YOUR FAV COLOR https://g.co/kgs/aoqdi7
 
-\input{_header}
-\begin{document}\pagestyle{others}\thispagestyle{first_page}
+% LINKS
+\RequirePackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor=highlight}
 
-\input{sections/objective}
+% BULLET POINTS
+\RequirePackage[inline]{enumitem}
+\setlength{\tabcolsep}{0in}
 
-\section{Skills}
-\input{sections/skills}
+% SECTION FORMATTING 
+\RequirePackage[nostruts]{titlesec}
+\titlespacing*{\section}{0em}{0.5em}{0em}
+\titleformat{\section}{\color{highlight} \scshape \raggedright \large}{}{0em}{}[\vspace{-0.75em}\hrulefill]
+% SUBSECTION FORMATTING
+\titlespacing*{\subsection}{0em}{0em}{0em}
+\titleformat{\subsection}{\bfseries}{}{0em}{}[]
 
-\section{Professional Experience}
-\input{sections/experience}
+% BOLD COMMAND
+\newcommand{\skills}[1]{ {\bfseries #1}}
 
-% make a newpage wherever it is a clean break
-% \newpage\pagestyle{others}
+% SUBTEXT
+\newcommand{\subtext}[1]{\textit{#1}\par\vspace{-.5em}}
 
-\section{Education}
-\input{sections/education}
+% tighter spacing than itemize
+\setlist[itemize]{align=parleft,left=0pt..1em}
+\newenvironment{zitemize}{
+\begin{itemize} \itemsep 0pt \parskip 0pt \parsep 1pt}
+{\end{itemize}\vspace{-.5em}}
 
-\section{Projects}
-\input{sections/project}
+% NO PAGE NUMBER
+\pagenumbering{gobble}
 
-\end{document}
+% SUBFILES IMPORTING
+\RequirePackage{standalone}
+
+% FOR TEMPLATE FILLER
+\RequirePackage[english]{babel}
+\RequirePackage{blindtext}% Filler Text

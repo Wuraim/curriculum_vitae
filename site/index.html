@@ -40,6 +40,12 @@
       color: var(--muted);
       line-height: 1.5;
     }
+    .ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+    }
     a.cta {
       display: inline-block;
       padding: 0.75rem 1.35rem;
@@ -52,7 +58,7 @@
     a.cta:hover { filter: brightness(1.08); }
     a.secondary {
       display: inline-block;
-      margin-top: 1rem;
+      margin-top: 1.25rem;
       color: var(--accent);
       font-size: 0.95rem;
     }
@@ -62,7 +68,10 @@
   <main>
     <h1>Grégoire Lorgnier</h1>
     <p>Software Engineer — curriculum vitae (PDF)</p>
-    <a class="cta" href="resume.pdf">Download resume.pdf</a>
+    <div class="ctas">
+      <a class="cta" href="resume.en.pdf">English</a>
+      <a class="cta" href="resume.fr.pdf">Français</a>
+    </div>
     <br>
     <a class="secondary" href="https://gregoirelorgnier.me">Portfolio</a>
   </main>

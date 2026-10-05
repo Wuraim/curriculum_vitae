@@ -21,15 +21,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Compile LaTeX
+      - name: Compile English CV
         uses: xu-cheng/latex-action@v4
         with:
-          root_file: resume.tex
+          root_file: resume.en.tex
+
+      - name: Compile French CV
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: resume.fr.tex
 
       - name: Prepare Pages site
         run: |
           mkdir -p _site
-          cp resume.pdf _site/
+          cp resume.en.pdf resume.fr.pdf _site/
           cp site/index.html _site/
 
       - name: Configure Pages
